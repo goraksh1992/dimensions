@@ -20,8 +20,9 @@ $settings = $this->db->select("language")->get('setting')->row();
                            $phone = explode(",",$setting->phone);
                             ?>
                             <div class="icon"><span class="icon-mobile"></span></div>
-                            <a class="phone" href="#"><?= $setting->phone;?></a>
+                            <a class="phone" href="#"><?= $setting->phone;?> | SITE UNDER CONSTRUCTION</a>
                          <?php endif; ?>
+						  
                     </div>
                 </div>
                 <div class="social">
@@ -62,8 +63,8 @@ $settings = $this->db->select("language")->get('setting')->row();
                             <div class="media-body">
                                 <h6 class="mb-0 helpInfo-title"><?= (!empty($setting->open_day)?$setting->open_day:null)?></h6>
                                 <?php if(!empty($setting->closed_day)): ?>
-                                   <p class="subText"><?= $setting->closed_day;?> - <span style="text-transform: uppercase;">
-                                   <?= display('closed')?></span>
+                                   <p class="subText"><b><?= $setting->closed_day;?></b> <!--<span style="text-transform: uppercase;">
+                                   <?= display('closed')?></span>-->
                                    </p>
                                 <?php endif ?>
                             </div>
@@ -91,7 +92,7 @@ $settings = $this->db->select("language")->get('setting')->row();
                             <div class="media-body">
                                 <h6 class="mb-0">
                                     <?php 
-                                      echo "We are available online.";
+                                      echo "Online Therapy <br/>In person Therapy <br/> Hybrid Therapy ";
                                     ?>
                                 </h6>
                                 <!-- <p class="subText"><?php echo substr($setting->address, 39, 80);?></p> -->
@@ -106,7 +107,7 @@ $settings = $this->db->select("language")->get('setting')->row();
     <nav class="navbar navbar-expand-lg d-none d-lg-block header-sticky">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto" style="font-size: 14px;">
 
                     <!-- Parent menu -->
                     <?php //echo "<pre>".print_r($parent_menu,true); exit;?>

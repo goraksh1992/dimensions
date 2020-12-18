@@ -6744,3 +6744,11 @@ content: "\f196";
 {
     margin: 3px 3px;
 }
+
+.testimonial2
+{
+    background-color: #79b8fa;
+    padding: 50px 50px;
+    text-align: center;
+    color: #000;
+}

@@ -31,12 +31,12 @@ class Testimonial_model extends CI_Model {
  
 	public function read_active()
 	{
-		return $this->db->select("lang.title, lang.author_name, lang.quotation, ws_testimonial.url")
+		return $this->db->select("lang.title, ws_testimonial.image, lang.author_name, lang.quotation, ws_testimonial.url")
 			->from('ws_testimonial_lang as lang')
 			->join($this->table, 'ws_testimonial.id=lang.tstml_id')
 			->where('lang.language', (!empty($this->language)?$this->language:$this->defualt))
 			->where('status', 1)
-			->limit(1)
+			->limit(10)
 			->get()
 			->result();
 	} 

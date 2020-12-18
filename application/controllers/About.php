@@ -52,7 +52,7 @@ class About extends CI_Controller {
 		$data['nurses'] = $this->doctor_model->read_nurse_about_us();
 		#--------get client testimonial list--------#
 		$data['testimonials'] = $this->testimonial_model->read_testimonial_about_us();
-
+		//echo "<pre>".print_r($data['about'],true); exit;
 		$data['content'] = $this->load->view('website/about',$data,true);
 		$this->load->view('website/index',$data);
 	} 

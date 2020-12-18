@@ -1,4 +1,10 @@
-<div class="blog-content">
+<style type="text/css">
+    .ht img{
+        height: 233px;
+        width: 100%;
+    }
+</style>
+<div class="blog-content" id="blog-content" style="background-color:#bfbfbf">
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
@@ -13,8 +19,8 @@
             if(!empty($latest_news)){
                 foreach ($latest_news as $value) {
             ?>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <article class="grid-content">
+                <div class="col-sm-6 col-md-6 col-lg-4 ht">
+                    <article class="grid-content" style="background-color:#ffffff">
                         <a href="<?= base_url('news/details/'.$value->nid.'/'.url_title($value->title))?>" class="img-link">
                             <img src="<?= (!empty($value->featured_image)?base_url($value->featured_image):base_url('assets_web/img/placeholder/blog.png'))?>" class="img-fluid" alt="">
                         </a>

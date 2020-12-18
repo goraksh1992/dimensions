@@ -86,6 +86,12 @@ class Doctor_model extends CI_Model {
 			->update($this->table,$data); 
 	} 
 
+	public function update_lang2($data = [])
+	{
+		return $this->db->where('user_id',$data['user_id'])
+			->update('user_lang',$data); 
+	} 
+
 	public function update_lang($data = [])
 	{
 		return $this->db->where('id',$data['id'])
@@ -139,6 +145,16 @@ class Doctor_model extends CI_Model {
 			return false;
 		}
 	}
+
+	public function read_language2($user_id)
+	{
+		return $this->db->select("user_lang.*, CONCAT_WS(' ', user.firstname, user.lastname) as dname")->where("user_lang.user_id", $user_id)
+			->from("user_lang")
+			->join('user','user.user_id = user_lang.user_id','left')
+			->order_by('user_lang.user_id', 'asc')
+			->get()
+			->row();
+	} 
 
 	public function read_language()
 	{

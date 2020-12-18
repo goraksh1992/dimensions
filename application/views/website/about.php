@@ -1,4 +1,4 @@
-<div class="page-header">
+<div class="page-header"> 
     <div class="page-header-carousel owl-carousel owl-theme">
         <?php if(!empty($banner)){ ?>
             <?php foreach($banner as $value): ?>
@@ -50,25 +50,25 @@
 <div class="about-wrapper">
     <div class="container">
         <div class="row align-items-center justify-content-between about-text">
-            <div class="col-md-12 col-lg-7">
+            <div class="col-md-12 col-lg-12">
                 <div class="feature-img">
-                    <img src="<?= (!empty($about[0]->image)?base_url($about[0]->image):base_url('assets_web/img/placeholder/about.png'))?>" height="1100" width="740" class="img-fluid" alt="<?= display('about_us')?>">
+                   <!--  <img src="<?= (!empty($about[0]->image)?base_url($about[0]->image):base_url('assets_web/img/placeholder/about.png'))?>" class="img-fluid" alt="<?= display('about_us')?>"> -->
                 </div>
             </div>
-            <div class="col-md-12 col-lg-5">
-                <div class="text-block">
-                    <h6 class="heading-sm"><?= display('about');?></h6>
+            <div class="col-md-12 col-lg-12">
+                <div class="text-block" style="margin-top:20px;">
+<TABLE width="100%">
+<TR>
+	<TD width="50%" valign="top">
+	 <img src="<?= (!empty($about[0]->image)?base_url($about[0]->image):base_url('assets_web/img/placeholder/about.png'))?>" class="img-fluid" alt="<?= display('about_us')?>">
+	</TD>
+	<TD>
+<!-- <h6 class="heading-sm"><?= display('about');?></h6> -->
                     <h3><?= (!empty($about[0]->title)?$about[0]->title:null);?></h3>
-                    <ul>
-                        <?php
-                            $arr = explode("\n", (!empty($about[0]->description)?$about[0]->description:null));
-                            $size=sizeof($arr);
-                            for($i=1; $i<$size; $i++){
-                                echo '<li>'.$arr[$i-1].'</li>';
-                                echo "\r\n";
-                            } 
-                         ?>
-                    </ul>
+                    <div>
+                        <?php echo $about[0]->description; ?>
+                    </div>
+                    
                     <hr>
                     <blockquote class="blockquote quote-text">
                         <p class="mb-0">“<?= (!empty($about[0]->quotation)?$about[0]->quotation:null);?>”</p>
@@ -76,7 +76,11 @@
                         <div class="signature">
                              <img src="<?= (!empty($about[0]->signature)?base_url($about[0]->signature):base_url('assets_web/img/placeholder/signature.png'))?>" alt="<?= display('signature')?>" height="134" width="84">
                         </div>
-                    </blockquote> 
+                    </blockquote> 	
+	</TD>
+</TR>
+</TABLE>
+                    
                 </div>
             </div>
         </div>
@@ -156,6 +160,7 @@
     </div>
 </div>
 <!-- /. End of team content-->
+
 <div class="testimonialContent text-center">
     <div class="container">
         <div class="row">

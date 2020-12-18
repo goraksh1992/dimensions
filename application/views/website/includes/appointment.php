@@ -20,7 +20,7 @@
                                     <h4><?= display('working_hours')?></h4>
                                     <div>
                                        <?= (!empty($setting->open_day)?$setting->open_day:null)?> <br>
-                                        <?= $setting->closed_day;?>: <?= display('closed')?>
+                                       <!--  <?= $setting->closed_day;?>: <?= display('closed')?> -->
                                     </div>
                                 </div>
                             </div>
@@ -31,11 +31,16 @@
                                 <div class="media-body">
                                     <h4><?= display('write_us')?></h4>
                                     <div>
-                                        <?php
-                                           $email = (!empty($basics->email)?$basics->email:null);
+									
+                                        
+										<a href="mailto:info@dimensionstherapy.org">
+										<?php
+                                           $email = (!empty($basics->email)?$basics->email:null); 
                                            $arr = explode(",",$email);
                                            echo implode("<br>", $arr);
                                         ?>
+										</a>
+										
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +60,9 @@
                         </div> 
                     </div> 
                     <p class="color-grey">
-                        <strong><?= display('notes_submitted_to_the_attendance_office_must_include_following')?>:</strong>
+                        <strong><!-- <?= display('notes_submitted_to_the_attendance_office_must_include_following')?> -->Pandemic Update<br/>
+Important information to keep children & staff stay healthy
+</strong>
                     </p>
                     <ul class="list-checkmark list-unstyled">
                         <?php
@@ -104,7 +111,7 @@
                     <div class="tab-content" id="nav-tabContent">
                        
                         <div class="tab-pane fade show active register-form" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <h2 class="semibold"><span><?= display('1')?></span><?= display('provide_your_primary_information_about_the_following_details')?></h2> 
+                            <h2 class="semibold">Provide your primary information to sign up and get our monthly newsletter</h2> 
                            <!-- <?= form_open_multipart('','id="appointmentForm"') ?>  -->
                            <div class="msg"></div>
                             <div class="form-row">
@@ -141,7 +148,7 @@
                         
                         <!-- for old patient -->
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <h2 class="semibold"><span><?= display('1')?></span> <?= display('provide_your_primary_information_about_the_following_details')?></h2>  
+                            <h2 class="semibold">Provide your primary information to sign up and get our monthly newsletter<!--  <?= display('provide_your_primary_information_about_the_following_details')?> --></h2>  
                              <?= form_open('website/appointment/create','id="appointmentForm"') ?> 
                              <div class="form-group">
                                 <label><?= display('patient_id')?> *</label>

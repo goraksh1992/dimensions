@@ -172,9 +172,28 @@ class Doctor extends CI_Controller {
 				redirect('doctor/create');
 			} else {
 				if ($this->doctor_model->update($postData)) {
-					
+
+					$langData = [
+						'user_id'      => $this->input->post('user_id'),
+						'language'     => $this->session->userdata('tableLang'),
+						'firstname'    => $this->input->post('firstname',true),
+						'lastname' 	   => $this->input->post('lastname',true),
+						'designation'  => $this->input->post('designation',true),
+						'address' 	   => $this->input->post('address',true),
+						'phone'        => $this->input->post('phone',true),
+						'mobile'       => $this->input->post('mobile', true), 
+						'career_title' => $this->input->post('career_title',true),
+						'short_biography' => $this->input->post('short_biography',true),
+						'specialist'   => $this->input->post('specialist', true),
+						'degree'       => $this->input->post('degree',true)
+					]; 
+
+					$this->doctor_model->update_lang2($langData);
+
 					#set success message
 					$this->session->set_flashdata('message',display('update_successfully'));
+
+
 				} else {
 					#set exception message
 					$this->session->set_flashdata('exception', display('please_try_again'));
@@ -290,6 +309,8 @@ class Doctor extends CI_Controller {
 
 
 	public function edit($user_id = null) {
+		//print_r($_POST);
+		//die();
 		$data['module'] = display("doctors");
 		$user_role = $this->session->userdata('user_role');
 		if ($user_role == 1 && $this->session->userdata('user_id') == $user_id)
@@ -301,11 +322,15 @@ class Doctor extends CI_Controller {
 		#-------------------------------#
 		$data['department_list'] = $this->department_model->department_list(); 
 		$data['doctor'] = $this->doctor_model->read_by_id($user_id); 
-		$data['languages'] = $this->doctor_model->read_language($user_id);
+		$data['languages'] = $this->doctor_model->read_language2($user_id);
 		#-------------------------------#
 		if (($data['doctor']->user_id != $this->session->userdata('user_id'))
 		&& $this->session->userdata('user_role') != 1)
 			redirect('login');
+
+		/*echo "<pre>";
+		print_r($data['languages']);
+		die();*/
 		#-------------------------------#
 		$data['content'] = $this->load->view('doctor_form',$data,true);
 		$this->load->view('layout/main_wrapper',$data);

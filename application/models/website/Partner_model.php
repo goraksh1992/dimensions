@@ -24,7 +24,7 @@ class Partner_model extends CI_Model {
 			->from($this->table)
 			->where('status', 1)
 			->limit('6')
-			->order_by('id','desc')
+			->order_by('sOrder','asc')
 			->get()
 			->result();
 	}

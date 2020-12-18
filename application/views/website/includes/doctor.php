@@ -4,8 +4,9 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
                     <div class="section-title">
-                        <h2><?= (!empty($section['doctor']['title'])?$section['doctor']['title']:null)?></h2>
-                        <!-- <p><?= (!empty($section['doctor']['description'])?$section['doctor']['description']:null)?></p> -->
+					<h2>Meet Our Therapists</h2>
+                       <!-- <h2><?= (!empty($section['doctor']['title'])?$section['doctor']['title']:null)?></h2>
+                         <p><?= (!empty($section['doctor']['description'])?$section['doctor']['description']:null)?></p> -->
                     </div>
                 </div>
             </div>
@@ -30,7 +31,8 @@
                 ?>
             </section>
             <div class="text-center mt-5 mb-5">
-                <a href="<?= base_url('doctors')?>" class="btn btn-primary"><?= display('view_our_team_of_surgeons')?></a>
+                <!-- <a href="<?= base_url('doctors')?>" class="btn btn-primary"><?= display('view_our_team_of_surgeons')?></a> -->
+                <a href="<?= base_url('doctors')?>" class="btn btn-primary">View our Team</a>
             </div>
         </div>
     </div>

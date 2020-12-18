@@ -32,7 +32,7 @@ class About extends CI_Controller {
 		$this->form_validation->set_rules('language', display('language'),'required');
 		$this->form_validation->set_rules('title', display('title'),'max_length[100]');
 		$this->form_validation->set_rules('author_name', display('author_name'),'max_length[30]');
-		$this->form_validation->set_rules('description', display('description'),'trim|max_length[500]');
+		$this->form_validation->set_rules('description', display('description'),'trim');
 		$this->form_validation->set_rules('quotation', display('quotation'),'trim|max_length[100]');
 		#-------------------------------#		
 		//image upload

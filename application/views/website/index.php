@@ -8,7 +8,7 @@
         <meta name="keyword" content="<?= (!empty($setting->meta_keyword)?$setting->meta_keyword:null) ?>" />
         <meta name="description" content="<?= (!empty($setting->meta_tag)?$setting->meta_tag:null) ?>" />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="<?= (!empty($basics->favicon)?base_url($basics->favicon):base_url('assets_web/img/placeholder/favicon.png')) ?>"/>
+        <link rel="shortcut icon" href="<?= (!empty($basics->favicon)?base_url($basics->favicon):base_url('assets_web/images/icons/DCCD_Logo_Final.png')) ?>"/>
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title><?= (!empty($setting->title)?$setting->title:null) ?></title>
 
@@ -38,8 +38,10 @@
                 console.log('on load');
             });
         </script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="myFunction()" style="font-family: 'Open Sans', sans-serif;">
         <!-- <div id="loading">
             <img id="loading-image" src="<?php echo base_url('assets_web/img/status.gif'); ;?>" alt="Loading..." />
         </div> -->
@@ -73,7 +75,7 @@
         <script src="<?= base_url('assets_web/vendor/bootstrap/js/bootstrap.min.js')?>"></script>
         <script src="<?= base_url('assets_web/vendor/metismenu/metisMenu.min.js')?>"></script>
         <script src="<?= base_url('assets_web/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js')?>"></script>
-        <script src="<?= base_url('assets_web/vendor/OwlCarousel2/dist/owl.carousel.min.js')?>"></script>
+        <script src="<?= base_url('assets_web/vendor/OwlCarousel2/dist/owl.carousel.js')?>"></script>
         <script src="<?= base_url('assets_web/vendor/select2/dist/js/select2.min.js')?>"></script>
         <script src="<?= base_url('assets_web/vendor/masonry/dist/masonry.pkgd.min.js')?>"></script>
         <script src="<?= base_url('assets_web/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')?>"></script>

@@ -62,7 +62,7 @@ class Home extends CI_Controller {
        $data['doctors'] = $this->doctor_model->read_home();  
        $data['latest_news'] = $this->news_model->read_news();
        #-----------------------------------#
-        //echo "<pre>".print_r($data,true); exit;
+        //echo "<pre>".print_r($data['testimonial'],true); exit;
        $data['content'] = $this->load->view('website/includes/home',$data,true);
        $this->load->view('website/index', $data);
     }

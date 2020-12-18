@@ -1,5 +1,12 @@
-<div class="testimonial2">
-    <div class="container">
+
+<?php 
+    //$testimonial_row = array();
+    //$testimonial_row = $testimonial;
+    //$testimonial = array();
+?>
+<div class="testimonial2" style="height: 300px;">
+    
+   <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-10 offset-lg-1">
                 <div class="testimonial2-text">
@@ -17,19 +24,63 @@
                         </g>
                         </svg>      
                     </span>
-                    <h2 class="testimonial-quote mb-5">
+                    <!-- <h2 class="testimonial-quote mb-5">
                         <?= $testimonial[0]->quotation;?>
-                    </h2>
-                    <div class="testimonial2-author d-flex justify-content-center align-items-center">
+                    </h2> -->
+                    <!-- <div class="testimonial2-author d-flex justify-content-center align-items-center">
                         <div class="testimonial2-author-name">
                            <?= $testimonial[0]->author_name;?>
                         </div>
-                        <!-- <div class="testimonial2-author-link">
+                        <div class="testimonial2-author-link">
                             <a href="<?= $testimonial[0]->url;?>"><?= $testimonial[0]->url;?></a>
-                        </div> -->
-                    </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+    </div> 
+    <div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <?php $i == 1; ?>
+    <div class="carousel-inner">
+       
+        <?php foreach( $testimonial as $item) : ?>
+            <div class="carousel-item <?php if($i == 1) echo "active"; ?>">
+                <!-- <img src="<?php echo base_url('assets_web/img/trn.png'); ?>" class="d-block w-100" alt="<?php echo $item->title; ?>"> -->
+                <div class="carousel-caption d-block w-100" style="top: 0px;position: relative;color:#ffffff">
+                <!-- <h5><?php echo $item->title; ?></h5> -->
+                <h3><?php echo $item->quotation; ?></h3>
+                </div>
+            </div>
+            <?php $i++; ?>
+        <?php endforeach;?>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
+</div>
+<style>
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: -100px;
+    left: 0%;
+    z-index: 997;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+..carousel-caption h5{
+    color: #000;
+    z-index: 999;
+}
+</style>

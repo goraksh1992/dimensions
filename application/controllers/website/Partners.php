@@ -48,7 +48,8 @@ class Partners extends CI_Controller {
 			'name' 		 => $this->input->post('name'),
 			'url' 		 => $this->input->post('url'),
 			'image' => (!empty($image)?$image:$this->input->post('old_image')),
-			'status' => $this->input->post('status')
+			'status' => $this->input->post('status'),
+			'sOrder' => $this->input->post('sOrder')
 		];
 		#-------------------------------#
 		if ($this->form_validation->run() === true) {

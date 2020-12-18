@@ -29,6 +29,7 @@
                     </div>
                 </div>
             </div>
+            <?php /* ?>
             <div class="row text-left mb-5">
                 <div class="col-md-6 ">
                     <h3 class="title-thin"><?= display('personal_information')?></h3>
@@ -74,6 +75,7 @@
                   <?php } }?>
                 </div>
             </div>
+            <?php */ ?>
         </div>
     </div>
 </div>

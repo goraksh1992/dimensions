@@ -76,10 +76,10 @@ $active_record = TRUE;//ci version 2.x
 
 $db['default'] = array(
     'dsn'   => '',
-    'hostname' => '13.233.40.197',
-    'username' => 'hradmin',
-    'password' => 'hrportal123',
-    'database' => 'dimensions',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'dimensions_dev',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
@@ -97,3 +97,4 @@ $db['default'] = array(
     'save_queries' => TRUE
 );
  
+

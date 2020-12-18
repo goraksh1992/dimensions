@@ -73,7 +73,8 @@
                                     $positions = array(
                                         '1'   =>'First',
                                         '2'   =>'Second',
-                                        '3'   =>'Third'
+                                        '3'   =>'Third',
+                                        '4'   =>'Fourth'
                                     );
                                     echo form_dropdown('position', $positions, $slider->position, 'class="form-control"');?>
                                 </div>

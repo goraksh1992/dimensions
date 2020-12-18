@@ -18,7 +18,7 @@
             <div class="panel-body panel-form">
                 <div class="row">
                     <div class="col-md-9 col-sm-12">
-                        <?php echo form_open_multipart('doctor/create','class="form-inner"') ?> 
+                        <?php echo form_open_multipart('doctor/create','class="form-inner"', 'type="POST"') ?> 
 
                             <?php echo form_hidden('user_id',$doctor->user_id) ?>
 
@@ -88,10 +88,10 @@
                                 <div class="col-xs-9">
                                     <div class="form-check">
                                         <label class="radio-inline">
-                                        <input type="radio" name="sex" value="Male" <?php echo  set_radio('sex', 'Male', TRUE); ?> ><?php echo display('male')?>
+                                        <input type="radio" name="sex" value="Male" <?php echo  set_radio('sex', 'Male', TRUE); if($doctor->sex == "Male"){echo "checked";} ?> ><?php echo display('male')?>
                                         </label>
                                         <label class="radio-inline">
-                                        <input type="radio" name="sex" value="Female" <?php echo  set_radio('sex', 'Female'); ?> ><?php echo display('female')?>
+                                        <input type="radio" name="sex" value="Female" <?php echo  set_radio('sex', 'Female');  if($doctor->sex == "Female"){echo "checked";} ?> ><?php echo display('female')?>
                                         </label> 
                                     </div>
                                 </div>
@@ -121,56 +121,56 @@
                              <div class="form-group row">
                                 <label for="designation" class="col-xs-3 col-form-label"><?php echo display('designation') ?> <i class="text-danger">*</i></label>
                                 <div class="col-xs-9">
-                                    <input name="designation" type="text" class="form-control" id="designation" placeholder="<?php echo display('designation') ?>" >
+                                    <input name="designation" type="text" class="form-control" id="designation" placeholder="<?php echo display('designation') ?>" value="<?php echo $languages->designation; ?>">
                                 </div>
                             </div>
                             
                             <div class="form-group row">
                                 <label for="address" class="col-xs-3 col-form-label"><?php echo display('address') ?> <i class="text-danger">*</i></label>
                                 <div class="col-xs-9">
-                                    <textarea name="address" class="form-control"  placeholder="<?php echo display('address') ?>" maxlength="140" rows="7" id="address"></textarea>
+                                    <textarea name="address" class="form-control"  placeholder="<?php echo display('address') ?>" maxlength="140" rows="7" id="address"><?php echo $languages->address; ?></textarea>
                                 </div>
                             </div> 
 
                             <div class="form-group row">
                                 <label for="phone" class="col-xs-3 col-form-label"><?php echo display('phone') ?> </label>
                                 <div class="col-xs-9">
-                                    <input name="phone" class="form-control" type="number" placeholder="<?php echo display('phone') ?>" id="phone" >
+                                    <input name="phone" class="form-control" type="number" placeholder="<?php echo display('phone') ?>" value="<?php echo $languages->phone; ?>" id="phone" >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="mobile" class="col-xs-3 col-form-label"><?php echo display('mobile') ?> <i class="text-danger">*</i></label>
                                 <div class="col-xs-9">
-                                    <input name="mobile" class="form-control" type="number" placeholder="<?php echo display('mobile') ?>" id="mobile">
+                                    <input name="mobile" class="form-control" type="number" placeholder="<?php echo display('mobile') ?>" value="<?php echo $languages->mobile; ?>" id="mobile">
                                 </div>
                             </div>
 
                              <div class="form-group row">
                                 <label for="career_title" class="col-xs-3 col-form-label"><?php echo display('career_title') ?> <i class="text-danger">*</i></label>
                                 <div class="col-xs-9">
-                                    <textarea name="career_title" class="form-control" placeholder="<?= display('career_title')?>" id="career_title" maxlength="255" rows="5"></textarea>
+                                    <textarea name="career_title" class="form-control" placeholder="<?= display('career_title')?>" id="career_title" maxlength="255" rows="5"><?php echo $languages->career_title; ?></textarea>
                                 </div>
                             </div> 
 
                             <div class="form-group row">
                                 <label for="short_biography" class="col-xs-3 col-form-label"><?php echo display('short_biography') ?></label>
                                 <div class="col-xs-9">
-                                    <textarea name="short_biography" class="tinymce form-control" placeholder="Address" id="short_biography" rows="7"></textarea>
+                                    <textarea name="short_biography" class="tinymce form-control" placeholder="Address" id="short_biography" rows="7"><?php echo $languages->short_biography; ?></textarea>
                                 </div>
                             </div> 
 
                             <div class="form-group row">
                                 <label for="specialist" class="col-xs-3 col-form-label"><?php echo display('specialist') ?></label>
                                 <div class="col-xs-9">
-                                    <input type="text" name="specialist" class="form-control" placeholder="<?php echo display('specialist') ?>" id="specialist" >
+                                    <input type="text" name="specialist" class="form-control" placeholder="<?php echo display('specialist') ?>" value="<?php echo $languages->specialist; ?>" id="specialist" >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="degree" class="col-xs-3 col-form-label"><?php echo display('education_degree') ?></label>
                                 <div class="col-xs-9">
-                                    <textarea name="degree" class="tinymce form-control" placeholder="<?php echo display('education_degree') ?>" id="degree" maxlength="140" rows="7"></textarea>
+                                    <textarea name="degree" class="tinymce form-control" placeholder="<?php echo display('education_degree') ?>" id="degree" maxlength="140" rows="7"><?php echo $languages->degree; ?></textarea>
                                 </div>
                             </div> 
 

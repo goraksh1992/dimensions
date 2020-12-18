@@ -36,6 +36,7 @@
 --------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /*
 Flaticon icon font: Flaticon
@@ -102,11 +103,12 @@ body {
     color: rgb(72, 72, 72);
     /*font-family: 'Noto Sans', sans-serif;*/
     /*font-family: 'Roboto', sans-serif;*/
-    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Raleway', sans-serif;*/
     /*font-family: 'Dosis', sans-serif;*/
     /*font-family: 'Montserrat', sans-serif;*/
     /*font-family: 'Encode Sans Condensed', sans-serif;*/
     /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Open Sans', sans-serif !important;
 }
 a:hover{
     text-decoration: none;
@@ -317,7 +319,7 @@ p {
 }
 @media(min-width: 992px){
     .middBar {
-        padding: 30px 0;
+        padding: 0px 0;
         border-bottom: 1px solid #ececec;
     }
 }
@@ -870,19 +872,19 @@ p {
 }
 .slide-tablecell .slide-text h2 {
     font-size: 54px;
-    font-weight: 900;
+    font-weight: 500;
     margin-top: 0;
     color: #fff;
     margin-bottom: 1rem;
     line-height: 65px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 1.5px;
     text-shadow: 0 11px 10px rgba(0,0,0,0.19);
 }
 .slide-tablecell .slide-text p {
-    font-size: 17px;
-    line-height: 27px;
-    color: #fff;
+    font-size: 50px;
+    line-height: 40px;
+    color: #fffff; 
     margin: 0;
 }
 .animation-slide.owl-theme .owl-nav{
@@ -1124,7 +1126,7 @@ p {
 }
 @media (min-width: 1200px) {
     .animation-slide .owl-dots {
-        width: 1110px;
+        width: 1130px;
     }
 }
 /*Content Wrapper*/
@@ -1163,7 +1165,7 @@ p {
     color: #007bff;
 }
 .c-box-2 .icon-widget i {
-    color: #ffc107;
+    color: #0c5d10;
 }
 .coloumn {
     padding: 30px;
@@ -1171,20 +1173,24 @@ p {
     min-height: 280px;
 }
 .c-box-1 {
-    background-color: #79b8fa;
+    background-color: #3b90e9;
+    /*background-color: #79b8fa;*/
 }
 .c-box-1:hover {
     background-color: #007bff;
 }
 
 .c-box-2 {
-    background-color: #f9df91;
+    background-color: #447210;
+    /*background-color: #f9df91;*/
 }
 .c-box-2:hover {
-    background-color: #ffc107;
+    background-color: #0c5d10;
+    /*background-color: #ffc107;*/
 }
 .c-box-3 {
-    background-color: #fa75ae;
+    background-color: #dd6096;
+    /*background-color: #fa75ae;*/
 }
 .c-box-3:hover {
     background-color: #e83e8c;
@@ -1923,7 +1929,6 @@ label.file-upload input[type=file] {
 h2.semibold {
     color: #000080;
     position: relative;
-    padding-left: 45px;
     padding-bottom: 20px;
     font-size: 16px;
     line-height: 20px;
@@ -2403,11 +2408,11 @@ h2.semibold span {
 }
 @media(min-width: 992px){
     .quotes-marks.mark-right {
-        bottom: -125px;
+        bottom: -275px;
         right: -80px;
     }
     .quotes-marks.mark-left{
-        top: -125px;
+        top: -59px;
         left: -80px;
     }
 }
@@ -2418,11 +2423,11 @@ h2.semibold span {
 }
 /* Client ------*/ 
 .partners-content {
-    background-color: #007bff;
-    padding: 70px 0 40px;
+    background-color: #ffffff;
+    padding: 50px 0 40px;
 }
 .partner-logo{
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 /*[Department]
 --------------------------*/
@@ -2760,9 +2765,9 @@ h2.semibold span {
     font-weight: 700;
 }
 .signature {
-    position: absolute;
+    /*position: absolute;
     bottom: -60px;
-    left: 0;
+    left: 0;*/
 }
 .signature img {
     height: 75px;
@@ -3887,4 +3892,31 @@ a.appointment-link i {
 .serial_no,.slbtn
 {
     margin: 3px 3px;
+}
+.testimonial2
+{
+    background-color: #79b8fa;
+    padding: 30px 100px 50px;
+    text-align: center;
+    color: #000;
+}
+.carousel-item, #carouselExampleCaptions, .carousel-inner, .carousel-item
+{
+    background-color: none;
+}
+.carousel-item img{
+    background: none;
+}
+.carousel-caption h5{
+    top:10px;
+}
+.carousel-item, .carousel-item p
+{
+    min-height:200px;
+}
+.carousel-control-prev {
+    left: -110px;
+}
+.carousel-control-next {
+    right: -110px;
 }

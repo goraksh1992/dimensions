@@ -55,7 +55,7 @@
                                 <li><i class="ti-mobile"></i> <?= display('phone')?>: <a href="<?= display('phone')?>:<?= $phone[0];?>"><?= $phone[0];?></a></li>
                                 <li><i class="icon-mobile"></i> <?= display('text')?>: <a href="<?= (!empty($setting->text)?$setting->text:null)?>"> <?= (!empty($setting->text)?$setting->text:null)?></a></li>
                                 <li><i class="ti-email"></i> <?= display('email')?>: <a href="<?= $email[0];?>" class="linkUnderlined"><?= $email[0];?></a></li>
-                                <li><i class="ti-printer"></i> <?= display('fax')?>: <span><?= (!empty($setting->fax)?$setting->fax:null)?></span></li>
+                                <!-- <li><i class="ti-printer"></i> <?= display('fax')?>: <span><?= (!empty($setting->fax)?$setting->fax:null)?></span></li> -->
                             </ul>
                             <div class="btnBlock ">
                                 <a href="<?= (!empty($basics->direction)?$basics->direction:'https://www.google.com/maps/place/Apollo+Hospital/@23.8099168,90.4289362,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c64aba47cf9d:0x2650d783b08350a5!8m2!3d23.8099168!4d90.4311249')?>" class="btn btn-link" target="_blank"><?= display('get_directions')?><i class="ti-arrow-right"></i></a>

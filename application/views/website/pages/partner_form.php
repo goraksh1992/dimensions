@@ -39,6 +39,13 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="sOrder" class="col-xs-3 col-form-label">Sort Order</label>
+                                <div class="col-xs-9">
+									<input name="sOrder"  type="text" class="form-control" id="sOrder" placeholder="<?php echo display('sOrder') ?>" value="<?= $partner->sOrder ?>">
+                                </div>
+                            </div>
+
                             <!-- if logo is already uploaded -->
                             <?php if(!empty($partner->image)) {  ?>
                             <div class="form-group row">
